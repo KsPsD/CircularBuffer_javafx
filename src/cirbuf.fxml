@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<fx:root fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0" type="AnchorPane" xmlns="http://javafx.com/javafx/" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0" type="AnchorPane" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <HBox layoutX="14.0" layoutY="14.0" prefHeight="100.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
       <AnchorPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
@@ -19,15 +19,6 @@
                <children>
                   <Label alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" prefHeight="40.0" text="Buffer Size" />
                   <TextField fx:id="tfBufSize" maxWidth="1.7976931348623157E308" onAction="#handleBufSizeIn" prefHeight="40.0" />
-                  <Label alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="40.0" text="Count" />
-                  <Label fx:id="lblCount" alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="40.0" style="-fx-background-color: LIME;">
-                     <padding>
-                        <Insets bottom="20.0" left="20.0" top="20.0" />
-                     </padding>
-                     <font>
-                        <Font name="Arial" size="18.0" />
-                     </font>
-                  </Label>
                   <Button fx:id="btnStart" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleBtnStart" prefHeight="40.0" prefWidth="71.0" text="Start">
                      <VBox.margin>
                         <Insets top="40.0" />
@@ -35,9 +26,41 @@
                   </Button>
                </children>
             </VBox>
-            <Pane fx:id="drawPane" layoutX="152.0" layoutY="110.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="170.0" AnchorPane.topAnchor="20.0" />
+            <Pane fx:id="drawPane" layoutX="152.0" layoutY="110.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="170.0" AnchorPane.topAnchor="20.0">
+               <children>
+                  <Label fx:id="lblCount1" layoutX="60.0" layoutY="34.0" prefHeight="25.0" prefWidth="21.0" />
+                  <Label fx:id="lblCount2" layoutX="60.0" layoutY="228.0" prefHeight="25.0" prefWidth="21.0" />
+                  <Label fx:id="lblCount3" alignment="CENTER" layoutX="318.0" layoutY="119.0" maxWidth="1.7976931348623157E308" prefHeight="61.0" prefWidth="53.0" style="-fx-background-color: LIME;">
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" top="20.0" />
+                     </padding>
+                     <font>
+                        <Font name="Arial" size="18.0" />
+                     </font>
+                  </Label>
+               </children></Pane>
          </children>
       </AnchorPane>
-      <HBox prefHeight="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <HBox prefHeight="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label prefHeight="53.0" prefWidth="100.0" text="Producer" />
+                  <Label prefHeight="45.0" prefWidth="100.0" text="Consumer" />
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label prefHeight="53.0" prefWidth="100.0" text="Producer 1" />
+                  <Label fx:id="lblNumber" prefHeight="45.0" prefWidth="100.0" text="Label" />
+               </children>
+            </VBox>
+            <VBox prefHeight="100.0" prefWidth="477.0">
+               <children>
+                  <Label fx:id="lblFiboP" prefHeight="65.0" prefWidth="477.0" text="Label" />
+                  <Label fx:id="lblFiboC" prefHeight="64.0" prefWidth="476.0" text="Label" />
+               </children>
+            </VBox>
+         </children></HBox>
    </children>
 </fx:root>
